@@ -64,6 +64,44 @@ body{
     background: var(--dark-blue); 
 }
 
-/* .champion-image{
-    filter: grayscale(1);
-} */
+.victoire{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15em;
+    background-color: green;
+    color: white;
+    opacity: .5;
+    position: absolute;
+    z-index: 1;
+}
+
+.egalite{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15em;
+    background-color: orange;
+    color: white;
+    opacity: .5;
+    position: absolute;
+    z-index: 1;
+}
+
+.defaite{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15em;
+    background-color: red;
+    color: white;
+    opacity: .5;
+    position: absolute;
+    z-index: 1;
+}
