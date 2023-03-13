@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <title>PFC</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="main-title">
+            <img src="./assets/league_of_legends.live.ico" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            <p class="title">Chifumi Legends</p>
+        </div>
+    </nav>
+    
+    <div id="app"></div>
+
+    <p class="text-center pt-5">Vous</p>
+
+    <div class="card-choice">
+        <div class="card" id="player-card">
+            <img class="champion-image" src="./assets/malaphite.jpg" alt="Pierre">
+            <div class="card-body">
+                <h5 class="card-title">PIERRE</h5>
+            </div>
+            <input type="hidden" name="pierre" value="1">
+        </div>
+        <div class="card" id="player-card">
+            <img class="champion-image" src="./assets/ivern.jpg" alt="Feuille">
+            <div class="card-body">
+                <h5 class="card-title">FEUILLE</h5>
+            </div>
+            <input type="hidden" name="feuille" value="2">
+        </div>
+        <div class="card" id="player-card">
+            <img class="champion-image" src="./assets/gwen.jpg" alt="Ciseaux">
+            <div class="card-body">
+                <h5 class="card-title">CISEAUX</h5>
+            </div>
+            <input type="hidden" name="ciseaux" value="3">
+        </div>
+    </div>
+
+    <p class="text-center pt-4">Votre adversaire </p>
+
+    <div class="ennemi-card">
+        <div class="card" id="pierre">
+            <div class="background"></div>
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
