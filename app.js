@@ -14,6 +14,12 @@ const ennemieImg = document.querySelector(".background");
 const ennemieTxt = document.querySelector(".ennemi-card .card-title");
 const result = document.querySelector(".result")
 const resultText = document.querySelector(".result-text")
+const yourKill = document.querySelector(".your-kda #kill")
+const yourDeath = document.querySelector(".your-kda #death")
+const yourAssist = document.querySelector(".your-kda #assist")
+const ennemieKill = document.querySelector(".ennemie-kda #kill")
+const ennemieDeath = document.querySelector(".ennemie-kda #death")
+const ennemieAssist = document.querySelector(".ennemie-kda #assist")
 
 function showEnnemie(){
     if(typeof playerChoice != "undefined"){
@@ -52,6 +58,8 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourAssist.innerHTML=parseInt(yourAssist)+1
+
                 }else if(playerChoice === pierre && botCard  === ciseaux){
                     result.classList.add("victoire")
                     resultText.innerHTML="Victoire"
@@ -65,6 +73,8 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourKill.innerHTML=parseInt(yourKill)+1
+
                 }else if(playerChoice === pierre && botCard === feuille){
                     result.classList.add("defaite")
                     resultText.innerHTML="Défaite"
@@ -78,9 +88,9 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourDeath.innerHTML=parseInt(yourDeath)+1
                 }
             }
-            
         }
         else if(parseInt(item.childNodes[5].value) == feuille){
             playerChoice = parseInt(item.childNodes[5].value)
@@ -102,6 +112,8 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourKill.innerHTML=parseInt(yourKill)+1
+
                 }else if(playerChoice === feuille && botCard  === ciseaux){
                     result.classList.add("defaite")
                     resultText.innerHTML="Défaite"
@@ -115,6 +127,8 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourDeath.innerHTML=parseInt(yourDeath)+1
+
                 }else if(playerChoice === feuille && botCard === feuille){
                     result.classList.add("egalite")
                     resultText.innerHTML="Egalité"
@@ -128,9 +142,10 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourAssist.innerHTML=parseInt(yourAssist)+1
+
                 }
             }
-            
         }
         else if(parseInt(item.childNodes[5].value) == ciseaux){
             playerChoice = parseInt(item.childNodes[5].value)
@@ -152,6 +167,8 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourDeath.innerHTML=parseInt(yourDeath)+1
+
                 }else if(playerChoice === ciseaux && botCard  === ciseaux){
                     result.classList.add("egalite")
                     resultText.innerHTML="Egalité"
@@ -165,6 +182,8 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourAssist.innerHTML=parseInt(yourAssist)+1
+
                 }else if(playerChoice === ciseaux && botCard === feuille){
                     result.classList.add("victoire")
                     resultText.innerHTML="Victoire"
@@ -178,9 +197,9 @@ playerCard.forEach(item => {
                         ennemieImg.style.background="#061C25"
                     }, 2500)
                     botCard = 0;
+                    yourKill.innerHTML=parseInt(yourKill)+1
                 }
             }
-            
         }
     })
 })
